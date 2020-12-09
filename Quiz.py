@@ -4,8 +4,10 @@
 
 # Score
 points = 0
-#?
+
+# ???
 truePoint = 0
+
 # Ask question
 print("What's the best game?")
 answer = input().strip("!?,.() ").upper()
