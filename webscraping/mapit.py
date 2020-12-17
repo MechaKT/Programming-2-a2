@@ -4,13 +4,20 @@
 
 import webbrowser
 import sys
+import pyperclip
 
-address = " ".join(sys.argv[1:])
+
+# if there are NO ARGUMENTS
+# grab address from clipboard
+if len(sys.argv) < 2:
+    address = pyperclip.paste()
+else:
+    address = " ".join(sys.argv[1:])
+
+print(f"Finding {address}...")
 # join(list) -> string
 # Takes a list and gives it a string
 
-# TODO: open the browser at a GMaps page with the arguments
+
 prefix = "https://google.com/maps/place/"
 webbrowser.open(prefix + address)
-
-# TODO: add feature to grab address from clipboard
